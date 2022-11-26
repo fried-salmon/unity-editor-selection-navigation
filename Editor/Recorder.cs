@@ -5,7 +5,6 @@ namespace EditorSelectionNavigation
 {
     public class Recorder<T> : IEnumerable<T>
     {
-        private bool _muteRecording;
         private SelectionNode<T> _current;
         private SelectionNode<T> _latest;
         public T Current => _current.Entry;
