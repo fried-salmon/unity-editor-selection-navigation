@@ -1,4 +1,4 @@
-# Unity Editor Selection Navigator
+# Unity Editor Selection Navigation
 
 This Unity package adds navigation capability between selections in the Editor, similar to how standards IDEs implement navigation capabilities
 
