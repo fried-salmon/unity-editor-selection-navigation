@@ -1,0 +1,18 @@
+{
+  "name": "com.mendel.unity-editor-selection-nevigation",
+  "displayName": "Unity Editor Selection Navigation",
+  "version": "1.0.0",
+  "description": "This Unity package adds navigation capability between selections in the Editor, similar to how standards IDEs implement navigation capabilities",
+  "dependencies": {},
+  "keywords": [
+    "unity",
+    "unity3d",
+    "history",
+    "selection",
+    "utility",
+    "navigation"
+  ],
+  "homepage": "https://github.com/fried-salmon/unity-editor-selection-navigation",
+  "license": "MIT",
+  "author": "Daniel Mendel"
+}
