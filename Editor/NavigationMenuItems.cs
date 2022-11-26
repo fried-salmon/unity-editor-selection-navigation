@@ -1,3 +1,4 @@
+using EditorNavigation;
 using UnityEditor;
 
 namespace EditorSelectionNavigation
@@ -28,6 +29,11 @@ namespace EditorSelectionNavigation
         {
             return SelectionNavigationUtility.CanNavigateForward();
         }
-
+        
+        [MenuItem("Navigate/Selection Navigation Window")]
+        private static void Window()
+        {
+            SelectionHistoryWindow.Open();
+        }
     }
 }
