@@ -1,6 +1,6 @@
 # Unity Editor Selection Navigation
 
-This Unity package adds navigation capability between selections in the Editor, similar to how standards IDEs implement navigation capabilities
+This UPM package adds navigation capability between selections in the Editor, similar to how standards IDEs implement navigation capabilities
 
 ![Screen Shot 2022-11-26 at 18 37 15](https://user-images.githubusercontent.com/113387610/204100484-e7d2b9aa-3dce-4120-83b1-1258c007a373.png)
 
