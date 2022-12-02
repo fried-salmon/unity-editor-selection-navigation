@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -5,14 +6,15 @@ namespace EditorSelectionNavigation
 {
     public class Recorder<T> : IEnumerable<T>
     {
-        private SelectionNode<T> _current;
-        private SelectionNode<T> _latest;
-        public T Current => _current.Entry;
+        private EntryNode _current;
+        private EntryNode _latest;
+        public T Current => IsEmpty ? throw new InvalidOperationException("Recorder is empty") : _current.Entry;
         public int Count => _latest?.Index ?? 0;
+        public bool IsEmpty => _current == null;
 
         public void Record(T newEntry)
         {
-            var newNode = new SelectionNode<T>()
+            var newNode = new EntryNode()
             {
                 Entry = newEntry,
                 Previous = _current,
@@ -29,7 +31,7 @@ namespace EditorSelectionNavigation
             _current = newNode;
         }
 
-        private bool SetCurrent(SelectionNode<T> node)
+        private bool SetCurrent(EntryNode node)
         {
             if (node == null) return false;
             _current = node;
@@ -77,11 +79,11 @@ namespace EditorSelectionNavigation
             return GetEnumerator();
         }
         
-        private class SelectionNode<T>
+        private class EntryNode
         {
             public T Entry;
-            public SelectionNode<T> Next;
-            public SelectionNode<T> Previous;
+            public EntryNode Next;
+            public EntryNode Previous;
             public int Index;
         }
     }
